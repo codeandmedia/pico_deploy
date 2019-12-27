@@ -30,6 +30,7 @@ php composer.phar create-project picocms/pico-composer www
 ${SUDO} chown -R www-data:www-data /var/www
 ${SUDO} find /var/www/ -type d -exec chmod 755 {} \;
 ${SUDO} find /var/www/ -type f -exec chmod 644 {} \;
+${SUDO} mv composer.phar /var/www
 echo "Well done! We gotta reboot..."
 sleep 5
 ${SUDO} reboot
@@ -61,6 +62,7 @@ php composer.phar create-project picocms/pico-composer www
 ${SUDO} chown -R www-data:www-data /var/www
 ${SUDO} find /var/www/ -type d -exec chmod 755 {} \;
 ${SUDO} find /var/www/ -type f -exec chmod 644 {} \;
+${SUDO} mv composer.phar /var/www
 echo "Well done! We gotta reboot..."
 sleep 5
 ${SUDO} reboot
