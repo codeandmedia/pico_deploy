@@ -26,7 +26,7 @@ ${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/n
 cd /var
 ${SUDO} mkdir www
 ${SUDO} curl -sSL https://getcomposer.org/installer | php
-php composer.phar create-project picocms/pico-composer www
+${SUDO} php composer.phar create-project picocms/pico-composer www
 cd
 wget https://github.com/codeandmedia/pico_mondrian/archive/master.zip
 unzip master.zip
@@ -65,7 +65,7 @@ ${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/n
 cd /var
 ${SUDO} mkdir www
 ${SUDO} curl -sSL https://getcomposer.org/installer | php
-php composer.phar create-project picocms/pico-composer www
+${SUDO} php composer.phar create-project picocms/pico-composer www
 cd
 wget https://github.com/codeandmedia/pico_mondrian/archive/master.zip
 unzip master.zip
