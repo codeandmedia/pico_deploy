@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LINUX_VERSION_NAME=`sed -n -e '/PRETTY_NAME/ s/^.*=\|"\| .*//gp' /etc/os-release`
+LINUX_VERSION_NAME=`sed -n -e '/PRETTY_NAME/ s/^.*=\|"\| .*//gp' /etc/*release`
 
 if [[ ${LINUX_VERSION_NAME} == "Debian" ]]
 
@@ -36,6 +36,9 @@ rm -R ~/picotest-master master.zip
 ${SUDO} chown -R www-data:www-data /var/www
 ${SUDO} find /var/www/ -type d -exec chmod 755 {} \;
 ${SUDO} find /var/www/ -type f -exec chmod 644 {} \;
+cd
+cd /var
+${SUDO} mv composer.phar /var/www
 echo "Well done! We gotta reboot..."
 sleep 5
 ${SUDO} reboot
@@ -73,6 +76,9 @@ rm -R ~/picotest-master master.zip
 ${SUDO} chown -R www-data:www-data /var/www
 ${SUDO} find /var/www/ -type d -exec chmod 755 {} \;
 ${SUDO} find /var/www/ -type f -exec chmod 644 {} \;
+cd
+cd /var
+${SUDO} mv composer.phar /var/www
 echo "Well done! We gotta reboot..."
 sleep 5
 ${SUDO} reboot
