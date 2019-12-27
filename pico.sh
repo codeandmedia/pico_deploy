@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-LINUX_VERSION_NAME=`sed -n -e '/PRETTY_NAME/ s/^.*=\|"\| .*//gp' /etc/os-release`
+LINUX_VERSION_NAME=`sed -n -e '/PRETTY_NAME/ s/^.*=\|"\| .*//gp' /etc/*release`
 
 if [[ ${LINUX_VERSION_NAME} == "Debian" ]]
 
@@ -19,10 +19,10 @@ ${SUDO} apt-get update
 ${SUDO} apt-get -y install nginx php7.4-cgi php-pear php7.4-mbstring php7.4-gd php7.4-zip php-apcu php7.4-fpm
 cd /etc/nginx/conf.d
 ${SUDO} rm default.conf
-${SUDO} wget https://raw.githubusercontent.com/saldacenkaw/nginx_conf/master/default.conf
+${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/default.conf
 cd /etc/nginx
 ${SUDO} rm nginx.conf
-${SUDO} wget https://raw.githubusercontent.com/saldacenkaw/nginx_conf/master/nginx.conf
+${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/nginx.conf
 cd /var
 ${SUDO} mkdir www
 ${SUDO} curl -sSL https://getcomposer.org/installer | php
@@ -50,10 +50,10 @@ ${SUDO} apt-get update
 ${SUDO} apt-get -y install nginx php7.4-cgi php-pear php7.4-mbstring php7.4-gd php7.4-zip php-apcu php7.4-fpm
 cd /etc/nginx/conf.d
 ${SUDO} rm default.conf
-${SUDO} wget https://raw.githubusercontent.com/saldacenkaw/nginx_conf/master/default.conf
+${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/default.conf
 cd /etc/nginx
 ${SUDO} rm nginx.conf
-${SUDO} wget https://raw.githubusercontent.com/saldacenkaw/nginx_conf/master/nginx.conf
+${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/nginx.conf
 cd /var
 ${SUDO} mkdir www
 ${SUDO} curl -sSL https://getcomposer.org/installer | php
