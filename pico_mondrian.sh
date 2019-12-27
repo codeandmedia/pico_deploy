@@ -19,24 +19,23 @@ ${SUDO} apt-get update
 ${SUDO} apt-get -y install nginx php7.4-cgi php-pear php7.4-mbstring php7.4-gd php7.4-zip php-apcu php7.4-fpm
 cd /etc/nginx/conf.d
 ${SUDO} rm default.conf
-${SUDO} wget https://raw.githubusercontent.com/saldacenkaw/nginx_conf/master/default.conf
+${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/default.conf
 cd /etc/nginx
 ${SUDO} rm nginx.conf
-${SUDO} wget https://raw.githubusercontent.com/saldacenkaw/nginx_conf/master/nginx.conf
+${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/nginx.conf
 cd /var
 ${SUDO} mkdir www
 ${SUDO} curl -sSL https://getcomposer.org/installer | php
 php composer.phar create-project picocms/pico-composer www
 cd
-wget https://github.com/saldacenkaw/picotest/archive/master.zip
+wget https://github.com/codeandmedia/pico_mondrian/archive/master.zip
 unzip master.zip
-cd picotest-master
+cd pico_mondrian-master
 ${SUDO} cp -r assets config content plugins themes /var/www
-rm -R ~/picotest-master master.zip
+rm -R ~/pico_mondrian-master master.zip
 ${SUDO} chown -R www-data:www-data /var/www
 ${SUDO} find /var/www/ -type d -exec chmod 755 {} \;
 ${SUDO} find /var/www/ -type f -exec chmod 644 {} \;
-cd
 cd /var
 ${SUDO} mv composer.phar /var/www
 echo "Well done! We gotta reboot..."
@@ -59,24 +58,23 @@ ${SUDO} apt-get update
 ${SUDO} apt-get -y install nginx php7.4-cgi php-pear php7.4-mbstring php7.4-gd php7.4-zip php-apcu php7.4-fpm
 cd /etc/nginx/conf.d
 ${SUDO} rm default.conf
-${SUDO} wget https://raw.githubusercontent.com/saldacenkaw/nginx_conf/master/default.conf
+${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/default.conf
 cd /etc/nginx
 ${SUDO} rm nginx.conf
-${SUDO} wget https://raw.githubusercontent.com/saldacenkaw/nginx_conf/master/nginx.conf
+${SUDO} wget https://raw.githubusercontent.com/codeandmedia/pico_deploy/master/nginx.conf
 cd /var
 ${SUDO} mkdir www
 ${SUDO} curl -sSL https://getcomposer.org/installer | php
 php composer.phar create-project picocms/pico-composer www
 cd
-wget https://github.com/saldacenkaw/picotest/archive/master.zip
+wget https://github.com/codeandmedia/pico_mondrian/archive/master.zip
 unzip master.zip
-cd picotest-master
+cd pico_mondrian-master
 ${SUDO} cp -r assets config content plugins themes /var/www
-rm -R ~/picotest-master master.zip
+rm -R ~/pico_mondrian-master master.zip
 ${SUDO} chown -R www-data:www-data /var/www
 ${SUDO} find /var/www/ -type d -exec chmod 755 {} \;
 ${SUDO} find /var/www/ -type f -exec chmod 644 {} \;
-cd
 cd /var
 ${SUDO} mv composer.phar /var/www
 echo "Well done! We gotta reboot..."
