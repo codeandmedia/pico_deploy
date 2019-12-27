@@ -9,7 +9,7 @@ Easily launch virtual machine with Pico CMS on popular hosting providers like DO
 1. Create **Debian** or **Ubuntu** virtual machine (I tested it on Linode and Vultr Debian 8, 9, 10 and Ubuntu 18.04 succesfully)
 2. Better to install all updates: sudo apt update and sudo apt upgrade
 3. Choose what you want to get: *Just Pico* installation or Pico CMS with [my Mondrian theme](https://github.com/codeandmedia/pico_mondrian)
-4. Execute (be careful and add sudo if necessary):
+4. Execute (be careful and add sudo if needed):
 
 ## Just Pico CMS 
 
