@@ -28,6 +28,6 @@ At the end your VM is going to restart. After reboot Pico CMS will be available 
 ## Notes
 
 + Nginx configs you may see in this repo. Nginx logs are off. It works on HTTP 1.1 (TBA "how to achieve HTTPS with Let's encrypt")
-+ PHP configs is default
++ PHP configs are default
 
 *Do not hesitate to create issues if something goes wrong*
