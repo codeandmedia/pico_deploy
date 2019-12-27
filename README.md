@@ -2,12 +2,12 @@
 
 [Pico CMS](https://github.com/picocms/Pico) is a stupidly simple, blazing fast, flat file CMS
 
-Easily launch virtual machine with Pico CMS on popular hosting providers like DO, Linode, Vultr etc.. The script install **PHP 7.4** (packages from deb.sury.org) + **NGINX** (from official repo, stable version) + **[Composer](https://github.com/composer/composer)** and last version of **Pico CMS**.  
+Easily launch virtual machine with Pico CMS on popular hosting providers like DO, Linode, Vultr etc.. The script install **PHP 7.4** (packages from deb.sury.org) + **NGINX** (from official repo, stable version) + **[Composer](https://github.com/composer/composer)** and the last version of **Pico CMS**.  
 
 ## How to 
 
 1. Create **Debian** or **Ubuntu** virtual machine (I tested it on Linode and Vultr Debian 8, 9, 10 and Ubuntu 18.04 succesfully)
-2. Better, you should install all updates: sudo apt update and sudo apt upgrade
+2. Better to install all updates: sudo apt update and sudo apt upgrade
 3. Choose what you want to get: *Just Pico* installation or Pico CMS with [my Mondrian theme](https://github.com/codeandmedia/pico_mondrian)
 4. Execute (be careful and add sudo if necessary):
 
