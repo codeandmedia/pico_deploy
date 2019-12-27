@@ -32,7 +32,7 @@ wget https://github.com/codeandmedia/pico_mondrian/archive/master.zip
 unzip master.zip
 cd pico_mondrian-master
 ${SUDO} cp -r assets config content plugins themes /var/www
-rm -R ~/pico_mondrian-master master.zip
+rm -R ~/pico_mondrian-master ~/master.zip
 ${SUDO} chown -R www-data:www-data /var/www
 ${SUDO} find /var/www/ -type d -exec chmod 755 {} \;
 ${SUDO} find /var/www/ -type f -exec chmod 644 {} \;
@@ -71,7 +71,7 @@ wget https://github.com/codeandmedia/pico_mondrian/archive/master.zip
 unzip master.zip
 cd pico_mondrian-master
 ${SUDO} cp -r assets config content plugins themes /var/www
-rm -R ~/pico_mondrian-master master.zip
+rm -R ~/pico_mondrian-master ~/master.zip
 ${SUDO} chown -R www-data:www-data /var/www
 ${SUDO} find /var/www/ -type d -exec chmod 755 {} \;
 ${SUDO} find /var/www/ -type f -exec chmod 644 {} \;
